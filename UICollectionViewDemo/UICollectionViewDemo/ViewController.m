@@ -42,7 +42,7 @@
     _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:circle];
     _collectionView.delegate =self;
     _collectionView.dataSource = self;
-    _collectionView.backgroundColor = [UIColor yellowColor];
+    _collectionView.backgroundColor = [UIColor clearColor];
     _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:_collectionView];
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CELL"];
@@ -64,7 +64,7 @@
 #pragma mark- dataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 20;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -75,10 +75,60 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CELL" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = [self randColor];
+    cell.layer.cornerRadius = cell.frame.size.height/2;
+    UILabel *lable = [[UILabel alloc]initWithFrame:cell.bounds];
+    lable.text = @"麻花是傻逼";
+    lable.adjustsFontSizeToFitWidth =YES;
+    [cell addSubview:lable];
     return cell;
 }
 
+-(UIColor*)randColor
+{
+    int a =arc4random()%7;
+    UIColor *co = [UIColor redColor];
+    switch (a) {
+        case 0:
+        {
+            return co;
+        }
+            break;
+            case 1:
+        {
+            co = [UIColor orangeColor];
+        }
+            break;
+            case 2:
+        {
+            co = [UIColor yellowColor];
+        }
+            break;
+            case 3:
+        {
+            co = [UIColor greenColor];
+        }
+            break;
+            case 4:
+        {
+            co = [UIColor cyanColor];
+        }
+            break;
+            case 5:
+        {
+            co = [UIColor blueColor];
+        }
+            break;
+            case 6:
+        {
+            co = [UIColor purpleColor];
+        }
+            break;
+        default:
+            break;
+    }
+    return co;
+}
 
 #pragma mark- delegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -88,11 +138,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row ==8 ||indexPath.row ==1)
-    {
-        return CGSizeMake(120, 120);
-    }
-    return CGSizeMake(80, 80);
+    return CGSizeMake(70,70);
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
