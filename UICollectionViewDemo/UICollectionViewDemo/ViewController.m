@@ -11,6 +11,8 @@
 
 @interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
+@property(nonatomic,assign)NSInteger cellCount;
+
 @end
 
 @implementation ViewController
@@ -39,6 +41,8 @@
     
     circle = [[CircleLayout alloc]init];
     
+    _cellCount = 20;
+    
     _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:circle];
     _collectionView.delegate =self;
     _collectionView.dataSource = self;
@@ -46,6 +50,9 @@
     _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:_collectionView];
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CELL"];
+    
+    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [_collectionView addGestureRecognizer:tapRecognizer];
 }
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated
@@ -61,10 +68,34 @@
     }
 }
 
+- (void)handleTapGesture:(UITapGestureRecognizer *)sender {
+    
+    if (sender.state == UIGestureRecognizerStateEnded)
+    {
+        CGPoint initialPinchPoint = [sender locationInView:_collectionView];
+        NSIndexPath* tappedCellPath = [_collectionView indexPathForItemAtPoint:initialPinchPoint];
+        if (tappedCellPath!=nil)
+        {
+            self.cellCount = self.cellCount - 1;
+            [_collectionView performBatchUpdates:^{
+                [_collectionView deleteItemsAtIndexPaths:@[tappedCellPath]];
+                
+            } completion:nil];
+        }
+        else
+        {
+            self.cellCount = self.cellCount + 1;
+            [_collectionView performBatchUpdates:^{
+                [_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
+            } completion:nil];
+        }
+    }
+}
+
 #pragma mark- dataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return _cellCount;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
