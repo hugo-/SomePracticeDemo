@@ -17,14 +17,14 @@ class ViewController: UIViewController {
         
         var btn=UIButton()
         btn.frame=CGRectMake(10,100,300, 50)
-        btn.backgroundColor=UIColor.yellowColor()
+        btn.backgroundColor=UIColor.blackColor()
         btn .setTitle("SWIFT", forState: UIControlState.Normal)
         btn .addTarget(self, action:"goTest", forControlEvents:UIControlEvents.TouchDown)
         self.view .addSubview(btn)
     }
     
     func goTest(){
-        var test = TestViewController()
+        var test = TestViewController(nibName: "TestViewController", bundle: nil);
         self.navigationController?.pushViewController(test, animated:true)
     }
     

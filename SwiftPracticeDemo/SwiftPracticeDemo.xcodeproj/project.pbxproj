@@ -13,7 +13,12 @@
 		9A4F61B71B7F04CB00D97E2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4F61B61B7F04CB00D97E2B /* Images.xcassets */; };
 		9A4F61BA1B7F04CB00D97E2B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4F61B81B7F04CB00D97E2B /* LaunchScreen.xib */; };
 		9A4F61C61B7F04CB00D97E2B /* SwiftPracticeDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F61C51B7F04CB00D97E2B /* SwiftPracticeDemoTests.swift */; };
-		9A4F61D01B7F07EF00D97E2B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F61CF1B7F07EF00D97E2B /* TestViewController.swift */; };
+		9A68E04A1B7F248900D334AC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A68E0481B7F248900D334AC /* TestViewController.swift */; };
+		9A68E04B1B7F248900D334AC /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A68E0491B7F248900D334AC /* TestViewController.xib */; };
+		9A68E0501B7F2DC800D334AC /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A68E04E1B7F2DC800D334AC /* OCViewController.m */; };
+		9A68E0511B7F2DC800D334AC /* OCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A68E04F1B7F2DC800D334AC /* OCViewController.xib */; };
+		9A68E0541B7F2FB700D334AC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A68E0521B7F2FB700D334AC /* TableViewController.swift */; };
+		9A68E0551B7F2FB700D334AC /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A68E0531B7F2FB700D334AC /* TableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,14 @@
 		9A4F61BF1B7F04CB00D97E2B /* SwiftPracticeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPracticeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4F61C41B7F04CB00D97E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4F61C51B7F04CB00D97E2B /* SwiftPracticeDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPracticeDemoTests.swift; sourceTree = "<group>"; };
-		9A4F61CF1B7F07EF00D97E2B /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9A68E0481B7F248900D334AC /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9A68E0491B7F248900D334AC /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		9A68E04C1B7F2DC800D334AC /* SwiftPracticeDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPracticeDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A68E04D1B7F2DC800D334AC /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		9A68E04E1B7F2DC800D334AC /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		9A68E04F1B7F2DC800D334AC /* OCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCViewController.xib; sourceTree = "<group>"; };
+		9A68E0521B7F2FB700D334AC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9A68E0531B7F2FB700D334AC /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +93,14 @@
 			children = (
 				9A4F61AF1B7F04CB00D97E2B /* AppDelegate.swift */,
 				9A4F61B11B7F04CB00D97E2B /* ViewController.swift */,
-				9A4F61CF1B7F07EF00D97E2B /* TestViewController.swift */,
+				9A68E0481B7F248900D334AC /* TestViewController.swift */,
+				9A68E0491B7F248900D334AC /* TestViewController.xib */,
+				9A68E0521B7F2FB700D334AC /* TableViewController.swift */,
+				9A68E0531B7F2FB700D334AC /* TableViewController.xib */,
+				9A68E04D1B7F2DC800D334AC /* OCViewController.h */,
+				9A68E04E1B7F2DC800D334AC /* OCViewController.m */,
+				9A68E04F1B7F2DC800D334AC /* OCViewController.xib */,
+				9A68E04C1B7F2DC800D334AC /* SwiftPracticeDemo-Bridging-Header.h */,
 				9A4F61B31B7F04CB00D97E2B /* Main.storyboard */,
 				9A4F61B61B7F04CB00D97E2B /* Images.xcassets */,
 				9A4F61B81B7F04CB00D97E2B /* LaunchScreen.xib */,
@@ -195,8 +214,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A68E0511B7F2DC800D334AC /* OCViewController.xib in Resources */,
 				9A4F61B51B7F04CB00D97E2B /* Main.storyboard in Resources */,
 				9A4F61BA1B7F04CB00D97E2B /* LaunchScreen.xib in Resources */,
+				9A68E0551B7F2FB700D334AC /* TableViewController.xib in Resources */,
+				9A68E04B1B7F248900D334AC /* TestViewController.xib in Resources */,
 				9A4F61B71B7F04CB00D97E2B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4F61B21B7F04CB00D97E2B /* ViewController.swift in Sources */,
-				9A4F61D01B7F07EF00D97E2B /* TestViewController.swift in Sources */,
+				9A68E04A1B7F248900D334AC /* TestViewController.swift in Sources */,
+				9A68E0501B7F2DC800D334AC /* OCViewController.m in Sources */,
+				9A68E0541B7F2FB700D334AC /* TableViewController.swift in Sources */,
 				9A4F61B01B7F04CB00D97E2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +364,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftPracticeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPracticeDemo/SwiftPracticeDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +377,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftPracticeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPracticeDemo/SwiftPracticeDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +438,7 @@
 				9A4F61CB1B7F04CB00D97E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A4F61CC1B7F04CB00D97E2B /* Build configuration list for PBXNativeTarget "SwiftPracticeDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +447,7 @@
 				9A4F61CE1B7F04CB00D97E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

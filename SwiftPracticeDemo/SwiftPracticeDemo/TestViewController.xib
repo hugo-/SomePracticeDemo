@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="SwiftPracticeDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQs-u0-Unu">
+                    <rect key="frame" x="10" y="100" width="580" height="30"/>
+                    <state key="normal" title="跳转到OC">
+                        <color key="titleColor" red="1" green="0.1169696408" blue="0.15831505930000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goOC:" destination="-1" eventType="touchDown" id="YQM-k3-lMu"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TestViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-M7-DEr">
+                    <rect key="frame" x="214" y="158" width="182" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="YaH-v1-rOi"/>
+                        <constraint firstAttribute="height" constant="40" id="lWW-sK-kWf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulw-Bp-TCg">
+                    <rect key="frame" x="277" y="285" width="46" height="30"/>
+                    <state key="normal" title="tableView">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goTableView:" destination="-1" eventType="touchDown" id="GIw-ol-YSQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="KEP-M7-DEr" firstAttribute="top" secondItem="WQs-u0-Unu" secondAttribute="bottom" constant="20" id="1Is-c5-UtB"/>
+                <constraint firstItem="WQs-u0-Unu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="2tE-7z-gr8"/>
+                <constraint firstAttribute="centerX" secondItem="Ulw-Bp-TCg" secondAttribute="centerX" id="966-zI-PeA"/>
+                <constraint firstItem="KEP-M7-DEr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="BTX-XD-WEw"/>
+                <constraint firstAttribute="trailing" secondItem="WQs-u0-Unu" secondAttribute="trailing" constant="10" id="efx-FO-R4K"/>
+                <constraint firstAttribute="centerY" secondItem="Ulw-Bp-TCg" secondAttribute="centerY" id="uyY-YX-2wR"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
