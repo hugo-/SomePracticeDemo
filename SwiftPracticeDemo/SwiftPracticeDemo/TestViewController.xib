@@ -14,8 +14,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQs-u0-Unu">
-                    <rect key="frame" x="10" y="100" width="580" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQs-u0-Unu">
+                    <rect key="frame" x="10" y="-50" width="580" height="30"/>
                     <state key="normal" title="跳转到OC">
                         <color key="titleColor" red="1" green="0.1169696408" blue="0.15831505930000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -24,8 +24,8 @@
                         <action selector="goOC:" destination="-1" eventType="touchDown" id="YQM-k3-lMu"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TestViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-M7-DEr">
-                    <rect key="frame" x="214" y="158" width="182" height="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TestViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-M7-DEr">
+                    <rect key="frame" x="209" y="100" width="182" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="YaH-v1-rOi"/>
                         <constraint firstAttribute="height" constant="40" id="lWW-sK-kWf"/>
@@ -34,8 +34,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulw-Bp-TCg">
-                    <rect key="frame" x="277" y="285" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulw-Bp-TCg">
+                    <rect key="frame" x="266" y="285" width="67" height="30"/>
                     <state key="normal" title="tableView">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -45,12 +45,14 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="KEP-M7-DEr" firstAttribute="top" secondItem="WQs-u0-Unu" secondAttribute="bottom" constant="20" id="1Is-c5-UtB"/>
+                <constraint firstItem="KEP-M7-DEr" firstAttribute="top" secondItem="WQs-u0-Unu" secondAttribute="bottom" constant="120" id="1Is-c5-UtB"/>
                 <constraint firstItem="WQs-u0-Unu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="2tE-7z-gr8"/>
                 <constraint firstAttribute="centerX" secondItem="Ulw-Bp-TCg" secondAttribute="centerX" id="966-zI-PeA"/>
-                <constraint firstItem="KEP-M7-DEr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="BTX-XD-WEw"/>
+                <constraint firstItem="KEP-M7-DEr" firstAttribute="centerX" secondItem="Ulw-Bp-TCg" secondAttribute="centerX" constant="0.5" id="R7O-5S-W6f"/>
                 <constraint firstAttribute="trailing" secondItem="WQs-u0-Unu" secondAttribute="trailing" constant="10" id="efx-FO-R4K"/>
+                <constraint firstAttribute="centerX" secondItem="KEP-M7-DEr" secondAttribute="centerX" id="qYT-J0-0kb"/>
                 <constraint firstAttribute="centerY" secondItem="Ulw-Bp-TCg" secondAttribute="centerY" id="uyY-YX-2wR"/>
+                <constraint firstItem="KEP-M7-DEr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="xRh-a8-h7u"/>
             </constraints>
         </view>
     </objects>
