@@ -109,7 +109,7 @@
     cell.backgroundColor = [self randColor];
     cell.layer.cornerRadius = cell.frame.size.height/2;
     UILabel *lable = [[UILabel alloc]initWithFrame:cell.bounds];
-    lable.text = @"麻花是傻逼";
+    lable.text = @"楼上是傻逼";
     lable.adjustsFontSizeToFitWidth =YES;
     [cell addSubview:lable];
     return cell;
