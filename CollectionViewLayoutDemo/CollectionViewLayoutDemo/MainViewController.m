@@ -7,9 +7,10 @@
 //
 
 #import "MainViewController.h"
-#import "MyCollectionViewCell.h"
+#import "Photo.h"
+#import "CollectionViewCell.h"
 
-#define CELL_WIDTH 129
+#define CELL_WIDTH 150
 #define CELL_COUNT 30
 #define CELL_IDENTIFIER @"WaterfallCell"
 
@@ -47,9 +48,8 @@
     _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
-    _collectionView.backgroundColor = [UIColor blackColor];
-    [_collectionView registerClass:[MyCollectionViewCell class]
-        forCellWithReuseIdentifier:CELL_IDENTIFIER];
+    _collectionView.backgroundColor = [UIColor whiteColor];
+    [_collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_IDENTIFIER];
     [self.view addSubview:_collectionView];
 }
 
@@ -90,7 +90,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return CELL_COUNT;
+    return [[Photo allPhotos] count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -101,11 +101,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MyCollectionViewCell *cell =
-    (MyCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
+   CollectionViewCell *cell  = (CollectionViewCell*)[_collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
-
+    Photo *photo = [[Photo allPhotos] objectAtIndex:indexPath.item];
+    [cell.headImageView setImage:photo.image];
+    cell.commentLabel.text = photo.comment;
     return cell;
 }
 
